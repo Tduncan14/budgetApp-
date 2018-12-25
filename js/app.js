@@ -1,5 +1,6 @@
 class UI {
-  constructor() {
+  constructor(id) {
+
     this.budgetFeedback = document.querySelector(".budget-feedback");
     this.expenseFeedback = document.querySelector(".expense-feedback");
     this.budgetForm = document.getElementById("budget-form");
@@ -17,6 +18,15 @@ class UI {
   }
 }
 
-function UI(){
+function eventListeners(){
+  const budgetForm = document.getElementById('budget-form');
+  const expenseForm = document.getElementById('expense-form');
+  const expenseList = document.getElementById('expense-list');
+
+  // Create  new instance of UI
   
 }
+
+document.addEventListener("DOMContentLoaded",function(){
+  eventListeners();
+});
