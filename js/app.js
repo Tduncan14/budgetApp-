@@ -143,10 +143,15 @@ class UI {
    let expense = this.itemList.filter(function(item){
      return item.id === id
    });
+   // show value
+   this.expenseInput.value =expense(0).title;
+   this.amountInput.value = expense(0).amount;
    // remove from the list
    let tempList = this.item.filter(function(item){
      return item.id !== id;
-   })
+   });
+   this.itemList = tempList;
+   this.showBalance();
    }
 // delete expense
    deleteExpense(element){
