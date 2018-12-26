@@ -77,6 +77,18 @@ class UI {
        let amount = parseInt(amountValue);
        this.expenseInput ='';
        this.amountInput = '';
+
+       let expense = {
+         id:this.itemID,
+         title:expenseValue,
+         amount:amount,
+       }
+       this.itemID++;
+       this.itemList.push(expense);
+       this.addExpense(expense)
+
+       // showBalance method
+
      }
 
 
