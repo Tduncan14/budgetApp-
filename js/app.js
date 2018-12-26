@@ -89,6 +89,12 @@ class UI {
 
        // showBalance method
 
+       // addexpense
+
+
+       // total expense
+       
+
      }
 
 
