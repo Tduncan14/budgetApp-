@@ -135,6 +135,7 @@ class UI {
    }
    /// edit expense
    editExpense(element){
+     
    let id = parseInt(element.dataset.id);
    let parent = element.parentElement.parentElement.parentElement
    // remove from dom
@@ -144,10 +145,11 @@ class UI {
      return item.id === id
    });
    // show value
-   this.expenseInput.value =expense(0).title;
+   
+   this.expenseInput.value = expense(0).title;
    this.amountInput.value = expense(0).amount;
    // remove from the list
-   let tempList = this.item.filter(function(item){
+   let tempList = this.itemList.filter(function(item){
      return item.id !== id;
    });
    this.itemList = tempList;
@@ -156,7 +158,7 @@ class UI {
 // delete expense
    deleteExpense(element){
      let id =parseInt(element.dataset.id);
-     let parent =element.parentElement.parenetElement.parentElement;
+     let parent =element.parentElement.parentElement.parentElement;
      // removes from the Dom
      this.expenseList.removeChild(parent);
     // removes from the list
@@ -194,7 +196,7 @@ function eventListeners(){
       ui.editExpense(event.target.parentElement);
     }
 
-    else if(event.target.parentElement.classList.contains('delete-icon')){
+    else if (event.target.parentElement.classList.contains('delete-icon')){
          ui.deleteExpense(event.target.parentElement);
     }
     console.log(event.target);
